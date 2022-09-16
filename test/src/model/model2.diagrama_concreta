@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrama_concreta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagrama_concreta="diagrama_concreta">
+  <listaDiagramas nombre="DiagramTest">
+    <listaPaquetes nombre="root">
+      <listaPaquetes nombre="universidad" ruta="root">
+        <listaPaquetes nombre="bienestar" ruta="root/universidad">
+          <listaClases nombre="Bienestar" ruta="root/universidad/bienestar">
+            <listaAtributos nombre="codigo" tipoDato="Number"/>
+            <listaMetodos nombre="RegistrarPersona"/>
+            <listaMetodos nombre="RegistrarCredito"/>
+          </listaClases>
+          <listaClases nombre="Persona" isAbstract="true" ruta="root/universidad/bienestar">
+            <listaAtributos nombre="cedula"/>
+            <listaAtributos nombre="nombre"/>
+            <listaAtributos nombre="correo"/>
+          </listaClases>
+          <listaClases nombre="Instructor" ruta="root/universidad/bienestar">
+            <listaAtributos nombre="salario" tipoDato="Number"/>
+            <listaAtributos nombre="cargo"/>
+          </listaClases>
+          <listaClases nombre="Estudiante" ruta="root/universidad/bienestar">
+            <listaAtributos nombre="facultad"/>
+            <listaAtributos nombre="programa"/>
+          </listaClases>
+        </listaPaquetes>
+        <listaPaquetes nombre="credito" ruta="root/universidad">
+          <listaClases nombre="Credito" ruta="root/universidad/credito">
+            <listaAtributos nombre="codigo" tipoDato="Number"/>
+            <listaAtributos nombre="nombre"/>
+            <listaAtributos nombre="horario" tipoDato="undefined"/>
+          </listaClases>
+          <listaClases nombre="AsigCreditoEst" ruta="root/universidad/credito">
+            <listaAtributos nombre="fechaAsignacion" tipoDato="undefined"/>
+            <listaAtributos nombre="estado" tipoDato="Boolean"/>
+          </listaClases>
+          <listaClases nombre="Cultural" ruta="root/universidad/credito"/>
+          <listaClases nombre="Deportivo" ruta="root/universidad/credito"/>
+          <listaClases nombre="Academico" ruta="root/universidad/credito"/>
+          <listaClases nombre="Horario" ruta="root/universidad/credito">
+            <listaAtributos nombre="dia" tipoDato="undefined"/>
+            <listaAtributos nombre="horaInicio"/>
+            <listaAtributos nombre="horaFin"/>
+          </listaClases>
+        </listaPaquetes>
+        <listaClases nombre="Lugar" ruta="root/universidad">
+          <listaAtributos nombre="nombre"/>
+        </listaClases>
+      </listaPaquetes>
+      <listaClases nombre="ClaseTest" modificadorAcceso="protected" isAbstract="true" ruta="root"/>
+    </listaPaquetes>
+    <listaPaquetes nombre="root2">
+      <listaClases nombre="ClaseExtra" ruta="root2"/>
+    </listaPaquetes>
+  </listaDiagramas>
+</diagrama_concreta:ModelFactory>
