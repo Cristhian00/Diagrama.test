@@ -302,6 +302,14 @@
     <element xmi:type="diagrama_concreta:TCDPaquete" href="model.diagrama_concreta#//@listaDiagramas.0/@listaPaquetes.3"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l3T2JDYDEe2jr54eS-dK8w" x="1240" y="210"/>
   </children>
+  <children xmi:type="notation:Node" xmi:id="_W2w6MDiXEe2a1LEgHnIGng" type="2002">
+    <children xmi:type="notation:DecorationNode" xmi:id="_W2w6NTiXEe2a1LEgHnIGng" type="5004"/>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_W2w6MTiXEe2a1LEgHnIGng"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_W2w6MjiXEe2a1LEgHnIGng" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_W2w6MziXEe2a1LEgHnIGng"/>
+    <element xmi:type="diagrama_concreta:TCDPaquete" href="model.diagrama_concreta#//@listaDiagramas.0/@listaPaquetes.4"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_W2w6NDiXEe2a1LEgHnIGng" x="1250" y="255"/>
+  </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_yj5DITRmEe2omeaJO1rHsg"/>
   <element xmi:type="diagrama_concreta:TCDDiagramaClases" href="model.diagrama_concreta#//@listaDiagramas.0"/>
   <edges xmi:type="notation:Edge" xmi:id="_KKUckDYBEe2jr54eS-dK8w" type="4005" source="_KF_9STYBEe2jr54eS-dK8w" target="_KF_9fzYBEe2jr54eS-dK8w">

@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="ASCII"?>
-<abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:abstracta="abstracta">
-  <listaPaquetes nombre="root" ruta=""/>
-  <listaPaquetes nombre="root2" ruta=""/>
+<abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:abstracta="abstracta" listaTodasClases="//@listaPaquetes.0/@listapaquetes.0/@listapaquetes.0/@listaClases.0 //@listaPaquetes.0/@listapaquetes.0/@listapaquetes.1/@listaClases.0 //@listaPaquetes.0/@listapaquetes.0/@listapaquetes.0/@listaClases.1 //@listaPaquetes.0/@listapaquetes.0/@listapaquetes.0/@listaClases.2 //@listaPaquetes.0/@listapaquetes.0/@listapaquetes.0/@listaClases.3 //@listaPaquetes.0/@listapaquetes.0/@listapaquetes.1/@listaClases.1 //@listaPaquetes.0/@listapaquetes.0/@listaClases.0 //@listaPaquetes.0/@listaClases.0 //@listaPaquetes.1/@listaClases.0 //@listaPaquetes.0/@listapaquetes.0/@listapaquetes.1/@listaClases.2 //@listaPaquetes.0/@listapaquetes.0/@listapaquetes.1/@listaClases.3 //@listaPaquetes.0/@listapaquetes.0/@listapaquetes.1/@listaClases.4 //@listaPaquetes.0/@listapaquetes.0/@listapaquetes.1/@listaClases.5" listaTodosPaquetes="//@listaPaquetes.0 //@listaPaquetes.1 //@listaPaquetes.0/@listapaquetes.0 //@listaPaquetes.0/@listapaquetes.0/@listapaquetes.0 //@listaPaquetes.0/@listapaquetes.0/@listapaquetes.1">
+  <listaPaquetes nombre="root" ruta="">
+    <listaClases nombre="ClaseTest1" ruta="root"/>
+    <listapaquetes nombre="universidad" ruta="root/">
+      <listaClases nombre="Lugar" ruta="root/universidad">
+        <listaAtributos nombre="nombre" visibilidad="Readonly" valorDefecto=""/>
+      </listaClases>
+      <listapaquetes nombre="bienestar" ruta="root/universidad/">
+        <listaClases nombre="Bienestar" ruta="root/universidad/bienestar">
+          <listaAtributos nombre="codigo" visibilidad="Readonly"/>
+          <listaMetodos nombre="registrarCred"/>
+          <listaMetodos nombre="registrarPer"/>
+        </listaClases>
+        <listaClases nombre="Persona" isAbstract="true" ruta="root/universidad/bienestar">
+          <listaAtributos nombre="cedula" tipoDato="Number" visibilidad="Protected"/>
+          <listaAtributos nombre="nombre" visibilidad="Protected" valorDefecto=""/>
+          <listaAtributos nombre="correo" visibilidad="Protected"/>
+        </listaClases>
+        <listaClases nombre="Instructor" ruta="root/universidad/bienestar">
+          <listaAtributos nombre="salario" tipoDato="Number" visibilidad="Private"/>
+          <listaAtributos nombre="cargo" tipoDato="undefined" visibilidad="Private"/>
+          <listaAtributos nombre="isActivo" tipoDato="boolean" visibilidad="Protected"/>
+        </listaClases>
+        <listaClases nombre="Estudiante" ruta="root/universidad/bienestar">
+          <listaAtributos nombre="facultad"/>
+          <listaAtributos nombre="programa" visibilidad="Private"/>
+          <listaMetodos nombre="registrarCre">
+            <listaParametros>codigo</listaParametros>
+          </listaMetodos>
+        </listaClases>
+      </listapaquetes>
+      <listapaquetes nombre="credito" ruta="root/universidad/">
+        <listaClases nombre="Credito" isAbstract="true" ruta="root/universidad/credito">
+          <listaAtributos nombre="codigo" visibilidad="Readonly"/>
+          <listaAtributos nombre="nombre" visibilidad="Private"/>
+          <listaAtributos nombre="horario" visibilidad="Private"/>
+          <listaMetodos nombre="EstReprobados"/>
+        </listaClases>
+        <listaClases nombre="AsigCreditoEst" ruta="root/universidad/credito">
+          <listaAtributos nombre="fechaAsig" tipoDato="undefined" visibilidad="Readonly"/>
+          <listaAtributos nombre="estado" tipoDato="boolean" visibilidad="Private"/>
+        </listaClases>
+        <listaClases nombre="Academico" ruta="root/universidad/credito"/>
+        <listaClases nombre="Cultural" ruta="root/universidad/credito"/>
+        <listaClases nombre="Deportivo" ruta="root/universidad/credito"/>
+        <listaClases nombre="Horario" ruta="root/universidad/credito">
+          <listaAtributos nombre="dia"/>
+          <listaAtributos nombre="horaIni"/>
+          <listaAtributos nombre="horaFin"/>
+        </listaClases>
+      </listapaquetes>
+    </listapaquetes>
+  </listaPaquetes>
+  <listaPaquetes nombre="root2" ruta="">
+    <listaClases nombre="ClaseTest2" ruta="root2"/>
+  </listaPaquetes>
 </abstracta:ModelFactory>
