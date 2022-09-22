@@ -2,31 +2,32 @@
 <diagrama_concreta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagrama_concreta="diagrama_concreta">
   <listaDiagramas nombre="Bienestar">
     <listaClases nombre="Bienestar" ruta="root/universidad/bienestar">
-      <listaAtributos nombre="codigo" visibilidad="Readonly"/>
+      <listaAtributos nombre="codigo" tipoDato="string" visibilidad="Readonly" valorDefecto=""/>
       <listaMetodos nombre="registrarCred"/>
       <listaMetodos nombre="registrarPer"/>
     </listaClases>
     <listaClases nombre="Credito" isAbstract="true" ruta="root/universidad/credito">
-      <listaAtributos nombre="codigo" visibilidad="Readonly"/>
-      <listaAtributos nombre="nombre" visibilidad="Private"/>
-      <listaAtributos nombre="horario" visibilidad="Private"/>
+      <listaAtributos nombre="codigo" tipoDato="number" visibilidad="Readonly"/>
+      <listaAtributos nombre="nombre" tipoDato="string" visibilidad="Private"/>
+      <listaAtributos nombre="horario" tipoDato="undefined" visibilidad="Private"/>
       <listaMetodos nombre="EstReprobados"/>
     </listaClases>
     <listaClases nombre="Persona" isAbstract="true" ruta="root/universidad/bienestar">
-      <listaAtributos nombre="cedula" tipoDato="Number" visibilidad="Protected"/>
-      <listaAtributos nombre="nombre" visibilidad="Protected" valorDefecto=""/>
-      <listaAtributos nombre="correo" visibilidad="Protected"/>
+      <listaAtributos nombre="cedula" tipoDato="number" visibilidad="Protected"/>
+      <listaAtributos nombre="nombre" tipoDato="string" visibilidad="Protected" valorDefecto=""/>
+      <listaAtributos nombre="correo" tipoDato="string" visibilidad="Protected"/>
     </listaClases>
     <listaClases nombre="Instructor" ruta="root/universidad/bienestar">
-      <listaAtributos nombre="salario" tipoDato="Number" visibilidad="Private"/>
+      <listaAtributos nombre="salario" tipoDato="number" visibilidad="Private"/>
       <listaAtributos nombre="cargo" tipoDato="undefined" visibilidad="Private"/>
       <listaAtributos nombre="isActivo" tipoDato="boolean" visibilidad="Protected"/>
     </listaClases>
     <listaClases nombre="Estudiante" ruta="root/universidad/bienestar">
-      <listaAtributos nombre="facultad"/>
-      <listaAtributos nombre="programa" visibilidad="Private"/>
+      <listaAtributos nombre="facultad" tipoDato="undefined"/>
+      <listaAtributos nombre="programa" tipoDato="string" visibilidad="Private"/>
       <listaMetodos nombre="registrarCre">
         <listaParametros>codigo</listaParametros>
+        <listaParametros>fecha</listaParametros>
       </listaMetodos>
     </listaClases>
     <listaClases nombre="AsigCreditoEst" ruta="root/universidad/credito">
@@ -34,21 +35,21 @@
       <listaAtributos nombre="estado" tipoDato="boolean" visibilidad="Private"/>
     </listaClases>
     <listaClases nombre="Lugar" ruta="root/universidad">
-      <listaAtributos nombre="nombre" visibilidad="Readonly" valorDefecto=""/>
+      <listaAtributos nombre="nombre" tipoDato="string" visibilidad="Readonly" valorDefecto=""/>
     </listaClases>
     <listaClases nombre="ClaseTest1" ruta="root"/>
-    <listaClases nombre="ClaseTest2" ruta="root2"/>
+    <listaClases nombre="ClaseTest2" ruta="root/root2"/>
     <listaClases nombre="Academico" ruta="root/universidad/credito"/>
     <listaClases nombre="Cultural" ruta="root/universidad/credito"/>
     <listaClases nombre="Deportivo" ruta="root/universidad/credito"/>
     <listaClases nombre="Horario" ruta="root/universidad/credito">
-      <listaAtributos nombre="dia"/>
-      <listaAtributos nombre="horaIni"/>
-      <listaAtributos nombre="horaFin"/>
+      <listaAtributos nombre="dia" tipoDato="undefined" visibilidad="Protected"/>
+      <listaAtributos nombre="horaIni" tipoDato="string" visibilidad="Private"/>
+      <listaAtributos nombre="horaFin" tipoDato="string" visibilidad="Private"/>
     </listaClases>
     <listaRelaciones xsi:type="diagrama_concreta:TCDDependencia" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.1" nombreOrigen="bienestar" nombreDestino="creditos" multiplicidadDestino="_0_n"/>
     <listaRelaciones xsi:type="diagrama_concreta:TCDAgregacion" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.6" nombreOrigen="bienestar" nombreDestino="lugares" multiplicidadDestino="_0_n"/>
-    <listaRelaciones xsi:type="diagrama_concreta:TCDAsociacion" source="//@listaDiagramas.0/@listaClases.6" target="//@listaDiagramas.0/@listaClases.1" nombreOrigen="lugares" nombreDestino="creditos" multiplicidadOrigen="_0_n" multiplicidadDestino="_1_n"/>
+    <listaRelaciones xsi:type="diagrama_concreta:TCDAsociacion" source="//@listaDiagramas.0/@listaClases.6" target="//@listaDiagramas.0/@listaClases.1" nombreOrigen="lugares" nombreDestino="creditos" multiplicidadOrigen="_1_n" multiplicidadDestino="_0_n"/>
     <listaRelaciones xsi:type="diagrama_concreta:TCDHerencia" source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.9"/>
     <listaRelaciones xsi:type="diagrama_concreta:TCDHerencia" source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.10"/>
     <listaRelaciones xsi:type="diagrama_concreta:TCDHerencia" source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.11"/>
@@ -57,12 +58,13 @@
     <listaRelaciones xsi:type="diagrama_concreta:TCDHerencia" source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.3"/>
     <listaRelaciones xsi:type="diagrama_concreta:TCDHerencia" source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.4"/>
     <listaRelaciones xsi:type="diagrama_concreta:TCDAsociacion" source="//@listaDiagramas.0/@listaClases.12" target="//@listaDiagramas.0/@listaClases.1" nombreOrigen="horarios" nombreDestino="creditos" multiplicidadOrigen="_1_n" multiplicidadDestino="_0_n"/>
-    <listaRelaciones xsi:type="diagrama_concreta:TCDAsociacion" source="//@listaDiagramas.0/@listaClases.12" target="//@listaDiagramas.0/@listaClases.5" nombreOrigen="horario" nombreDestino="asignacion" navegavilidad="Unidireccional"/>
+    <listaRelaciones xsi:type="diagrama_concreta:TCDAsociacion" source="//@listaDiagramas.0/@listaClases.12" target="//@listaDiagramas.0/@listaClases.5" nombreOrigen="horario" nombreDestino="asignaciones" multiplicidadDestino="_0_n"/>
     <listaRelaciones xsi:type="diagrama_concreta:TCDAsociacion" source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.3" nombreOrigen="creditos" nombreDestino="instructores" multiplicidadOrigen="_0_n" multiplicidadDestino="_1_n"/>
-    <listaRelaciones xsi:type="diagrama_concreta:TCDAsociacion" source="//@listaDiagramas.0/@listaClases.5" target="//@listaDiagramas.0/@listaClases.4" nombreOrigen="asignaciones" nombreDestino="estudiante" multiplicidadDestino="_0_n"/>
+    <listaRelaciones xsi:type="diagrama_concreta:TCDAsociacion" source="//@listaDiagramas.0/@listaClases.5" target="//@listaDiagramas.0/@listaClases.4" nombreOrigen="asignaciones" nombreDestino="estudiante" multiplicidadOrigen="_0_n"/>
     <listaRelaciones xsi:type="diagrama_concreta:TCDAsociacion" source="//@listaDiagramas.0/@listaClases.12" target="//@listaDiagramas.0/@listaClases.4" nombreOrigen="horarios" nombreDestino="estudiantes" multiplicidadOrigen="_0_n" multiplicidadDestino="_0_n"/>
+    <listaRelaciones xsi:type="diagrama_concreta:TCDAsociacion" source="//@listaDiagramas.0/@listaClases.7" target="//@listaDiagramas.0/@listaClases.8" nombreOrigen="test1" nombreDestino="listTest2" multiplicidadDestino="_0_n" navegavilidad="Unidireccional"/>
     <listaPaquetes nombre="root" ruta="/"/>
-    <listaPaquetes nombre="root2" ruta="/"/>
+    <listaPaquetes nombre="root2" ruta="root/"/>
     <listaPaquetes nombre="universidad" ruta="root/"/>
     <listaPaquetes nombre="bienestar" ruta="root/universidad/"/>
     <listaPaquetes nombre="credito" ruta="root/universidad/"/>
