@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abstracta="abstracta" listaTodasClases="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.0 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.0 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.1 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.2 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.3 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.1 //@listaPaquetes.0/@listapaquetes.1/@listaClases.0 //@listaPaquetes.0/@listaClases.0 //@listaPaquetes.0/@listapaquetes.0/@listaClases.0 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.2 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.3 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.4 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.5" listaTodosPaquetes="//@listaPaquetes.0 //@listaPaquetes.0/@listapaquetes.0 //@listaPaquetes.0/@listapaquetes.1 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1">
+<abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abstracta="abstracta" listaTodasClases="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.0 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.0 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.1 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.2 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.3 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.1 //@listaPaquetes.0/@listapaquetes.1/@listaClases.0 //@listaPaquetes.0/@listaClases.0 //@listaPaquetes.0/@listapaquetes.0/@listaClases.0 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.2 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.3 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.4 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.5 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listapaquetes.0/@listaClases.0" listaTodosPaquetes="//@listaPaquetes.0 //@listaPaquetes.0/@listapaquetes.0 //@listaPaquetes.0/@listapaquetes.1 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listapaquetes.0">
   <listaPaquetes nombre="root" ruta="">
     <listaClases nombre="ClaseTest1" ruta="root">
       <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listaClases.0" target="//@listaPaquetes.0/@listapaquetes.0/@listaClases.0" nombreOrigen="test1" nombreDestino="listTest2" multiplicidadDestino="_0_n" navegavilidad="Unidireccional"/>
@@ -7,6 +7,7 @@
     <listapaquetes nombre="root2" ruta="root/">
       <listaClases nombre="ClaseTest2" ruta="root/root2">
         <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.0/@listaClases.0" target="//@listaPaquetes.0/@listaClases.0" nombreOrigen="listTest2" nombreDestino="test1" multiplicidadOrigen="_0_n" navegavilidad="None"/>
+        <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.0/@listaClases.0" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listapaquetes.0/@listaClases.0" nombreOrigen="claseTest2" nombreDestino="testPrueba"/>
       </listaClases>
     </listapaquetes>
     <listapaquetes nombre="universidad" ruta="root/">
@@ -91,6 +92,11 @@
           <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.5" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.1" nombreOrigen="horario" nombreDestino="asignaciones" multiplicidadDestino="_0_n"/>
           <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.5" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.3" nombreOrigen="horarios" nombreDestino="estudiantes" multiplicidadOrigen="_0_n" multiplicidadDestino="_0_n"/>
         </listaClases>
+        <listapaquetes nombre="prueba" ruta="root/universidad/credito/">
+          <listaClases nombre="TestPrueba" ruta="root/universidad/credito/prueba">
+            <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listapaquetes.0/@listaClases.0" target="//@listaPaquetes.0/@listapaquetes.0/@listaClases.0" nombreOrigen="testPrueba" nombreDestino="claseTest2"/>
+          </listaClases>
+        </listapaquetes>
       </listapaquetes>
     </listapaquetes>
   </listaPaquetes>
