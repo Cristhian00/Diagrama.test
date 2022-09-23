@@ -303,14 +303,23 @@
   </children>
   <children xmi:type="notation:Node" xmi:id="_mOZA8DiWEe2grOHVWsRjbA" type="2001">
     <children xmi:type="notation:DecorationNode" xmi:id="_mOZA9jiWEe2grOHVWsRjbA" type="5003"/>
-    <children xmi:type="notation:BasicCompartment" xmi:id="_mOZA9ziWEe2grOHVWsRjbA" type="7001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_mOZA9ziWEe2grOHVWsRjbA" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_G-0FgDrFEe2yyM4CSlJXJA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_G-0FhTrFEe2yyM4CSlJXJA" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_G-0FgTrFEe2yyM4CSlJXJA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_G-0FgjrFEe2yyM4CSlJXJA" fontName="Segoe UI"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_G-0FgzrFEe2yyM4CSlJXJA"/>
+        <element xmi:type="diagrama_concreta:TCDAtributo" href="model2.diagrama_concreta#//@listaDiagramas.0/@listaClases.9/@listaAtributos.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G-0FhDrFEe2yyM4CSlJXJA" x="32" y="-1"/>
+      </children>
+    </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_mOZA-DiWEe2grOHVWsRjbA" type="7002"/>
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_mOZA8TiWEe2grOHVWsRjbA"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_mOZA8jiWEe2grOHVWsRjbA" fontName="Segoe UI"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_mOZA8ziWEe2grOHVWsRjbA"/>
     <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_mOZA9DiWEe2grOHVWsRjbA"/>
     <element xmi:type="diagrama_concreta:TCDClase" href="model2.diagrama_concreta#//@listaDiagramas.0/@listaClases.9"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mOZA9TiWEe2grOHVWsRjbA" x="320" y="295"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mOZA9TiWEe2grOHVWsRjbA" x="275" y="275"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_nwpd4DiWEe2grOHVWsRjbA" type="2001">
     <children xmi:type="notation:DecorationNode" xmi:id="_nwpd5jiWEe2grOHVWsRjbA" type="5003"/>

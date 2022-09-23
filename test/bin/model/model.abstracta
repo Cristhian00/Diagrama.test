@@ -73,6 +73,7 @@
           <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.1" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.3" nombreOrigen="asignaciones" nombreDestino="estudiante" multiplicidadOrigen="_0_n"/>
         </listaClases>
         <listaClases nombre="Academico" ruta="root/universidad/credito">
+          <listaAtributos nombre="duracion"/>
           <listaRelaciones xsi:type="abstracta:TCDHerencia" source="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.0" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.2"/>
         </listaClases>
         <listaClases nombre="Cultural" ruta="root/universidad/credito">

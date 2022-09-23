@@ -8,23 +8,23 @@
     </listaClases>
     <listaClases nombre="Credito" isAbstract="true" ruta="root/universidad/credito">
       <listaAtributos nombre="codigo" tipoDato="number" visibilidad="Readonly"/>
-      <listaAtributos nombre="nombre" tipoDato="string" visibilidad="Private"/>
-      <listaAtributos nombre="horario" tipoDato="undefined" visibilidad="Private"/>
+      <listaAtributos nombre="nombre" tipoDato="string" visibilidad="private"/>
+      <listaAtributos nombre="horario" tipoDato="undefined" visibilidad="private"/>
       <listaMetodos nombre="EstReprobados"/>
     </listaClases>
     <listaClases nombre="Persona" isAbstract="true" ruta="root/universidad/bienestar">
-      <listaAtributos nombre="cedula" tipoDato="number" visibilidad="Protected"/>
-      <listaAtributos nombre="nombre" tipoDato="string" visibilidad="Protected" valorDefecto=""/>
-      <listaAtributos nombre="correo" tipoDato="string" visibilidad="Protected"/>
+      <listaAtributos nombre="cedula" tipoDato="number" visibilidad="protected"/>
+      <listaAtributos nombre="nombre" tipoDato="string" visibilidad="protected" valorDefecto=""/>
+      <listaAtributos nombre="correo" tipoDato="string" visibilidad="protected"/>
     </listaClases>
     <listaClases nombre="Instructor" ruta="root/universidad/bienestar">
-      <listaAtributos nombre="salario" tipoDato="number" visibilidad="Private"/>
-      <listaAtributos nombre="cargo" tipoDato="undefined" visibilidad="Private"/>
-      <listaAtributos nombre="isActivo" tipoDato="boolean" visibilidad="Protected"/>
+      <listaAtributos nombre="salario" tipoDato="number" visibilidad="private"/>
+      <listaAtributos nombre="cargo" tipoDato="undefined" visibilidad="private"/>
+      <listaAtributos nombre="isActivo" tipoDato="boolean" visibilidad="protected"/>
     </listaClases>
     <listaClases nombre="Estudiante" ruta="root/universidad/bienestar">
       <listaAtributos nombre="facultad" tipoDato="undefined"/>
-      <listaAtributos nombre="programa" tipoDato="string" visibilidad="Private"/>
+      <listaAtributos nombre="programa" tipoDato="string" visibilidad="private"/>
       <listaMetodos nombre="registrarCre">
         <listaParametros>codigo</listaParametros>
         <listaParametros>fecha</listaParametros>
@@ -32,20 +32,22 @@
     </listaClases>
     <listaClases nombre="AsigCreditoEst" ruta="root/universidad/credito">
       <listaAtributos nombre="fechaAsig" tipoDato="undefined" visibilidad="Readonly"/>
-      <listaAtributos nombre="estado" tipoDato="boolean" visibilidad="Private"/>
+      <listaAtributos nombre="estado" tipoDato="boolean" visibilidad="private"/>
     </listaClases>
     <listaClases nombre="Lugar" ruta="root/universidad">
       <listaAtributos nombre="nombre" tipoDato="string" visibilidad="Readonly" valorDefecto=""/>
     </listaClases>
     <listaClases nombre="ClaseTest1" ruta="root"/>
     <listaClases nombre="ClaseTest2" ruta="root/root2"/>
-    <listaClases nombre="Academico" ruta="root/universidad/credito"/>
+    <listaClases nombre="Academico" ruta="root/universidad/credito">
+      <listaAtributos nombre="duracion" visibilidad="private"/>
+    </listaClases>
     <listaClases nombre="Cultural" ruta="root/universidad/credito"/>
     <listaClases nombre="Deportivo" ruta="root/universidad/credito"/>
     <listaClases nombre="Horario" ruta="root/universidad/credito">
-      <listaAtributos nombre="dia" tipoDato="undefined" visibilidad="Protected"/>
-      <listaAtributos nombre="horaIni" tipoDato="string" visibilidad="Private"/>
-      <listaAtributos nombre="horaFin" tipoDato="string" visibilidad="Private"/>
+      <listaAtributos nombre="dia" tipoDato="undefined" visibilidad="protected"/>
+      <listaAtributos nombre="horaIni" tipoDato="string" visibilidad="private"/>
+      <listaAtributos nombre="horaFin" tipoDato="string" visibilidad="private"/>
     </listaClases>
     <listaRelaciones xsi:type="diagrama_concreta:TCDDependencia" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.1" nombreOrigen="bienestar" nombreDestino="creditos" multiplicidadDestino="_0_n"/>
     <listaRelaciones xsi:type="diagrama_concreta:TCDAgregacion" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.6" nombreOrigen="bienestar" nombreDestino="lugares" multiplicidadDestino="_0_n"/>
