@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrama_concreta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagrama_concreta="diagrama_concreta">
+  <listaDiagramas nombre="Universidad">
+    <listaClases nombre="Animal">
+      <listaAtributos nombre="nombre" tipoDato="string" visibilidad="private"/>
+    </listaClases>
+    <listaClases nombre="Persona">
+      <listaMetodos nombre="registrarMascota" tipoRetorno="boolean">
+        <listaParametros>nombre</listaParametros>
+        <listaParametros>tamanio</listaParametros>
+      </listaMetodos>
+    </listaClases>
+    <listaRelaciones xsi:type="diagrama_concreta:TCDAgregacion" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.1" nombreDestino="Persona"/>
+    <listaRelaciones xsi:type="diagrama_concreta:TCDAsociacion" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.1" nombreDestino="persona"/>
+    <listaRelaciones xsi:type="diagrama_concreta:TCDComposicion" source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.0" nombreDestino="mascotas" multiplicidadDestino="_0_n"/>
+    <listaRelaciones xsi:type="diagrama_concreta:TCDDependencia" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.1"/>
+    <listaRelaciones xsi:type="diagrama_concreta:TCDHerencia" source="//@listaDiagramas.0/@listaClases.0" target="//@listaDiagramas.0/@listaClases.1"/>
+    <listaPaquetes nombre="root"/>
+  </listaDiagramas>
+  <listaDiagramas nombre="Programa"/>
+</diagrama_concreta:ModelFactory>

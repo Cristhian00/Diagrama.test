@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abstracta="abstracta">
+  <listaPaquetes nombre="root" ruta="">
+    <listapaquetes>
+      <listaClases nombre="Animal" ruta="root/paquete">
+        <listaAtributos nombre="nombre" tipoDato="string" visibilidad="private"/>
+        <listaMetodos nombre="registrar" modificadorAcceso="protected">
+          <listaParametros>nombre</listaParametros>
+          <listaParametros>tamanio</listaParametros>
+        </listaMetodos>
+        <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.0/@listaClases.0" target="//@listaPaquetes.0/@listapaquetes.0/@listaClases.1" nombreOrigen="listaAnimales" nombreDestino="persona" multiplicidadOrigen="_0_n"/>
+      </listaClases>
+      <listaClases nombre="Persona" ruta="">
+        <listaAtributos nombre="nombre" tipoDato="string"/>
+        <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.0/@listaClases.1" target="//@listaPaquetes.0/@listapaquetes.0/@listaClases.0" nombreOrigen="persona" nombreDestino="listaAnimales" multiplicidadDestino="_0_n"/>
+      </listaClases>
+    </listapaquetes>
+  </listaPaquetes>
+</abstracta:ModelFactory>
